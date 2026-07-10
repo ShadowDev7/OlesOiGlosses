@@ -5,10 +5,10 @@
  *  - αν δεν είναι προεγκατεστημένος, εγκατάσταση με
  *      sudo apt install build-essential
  *  - εντολή μεταγλώττισης:
- *      gcc paradeigma.cc -o paradeigma_cc
+ *      gcc paradeigma.cpp -o paradeigma
  *
  * Για εκτέλεση του προγράμματος:
- *    ./paradeigma_cc
+ *    ./paradeigma
  *
  * Αποτέλεσμα:
  *  Γεια σου, κόσμε!
@@ -19,27 +19,23 @@
 
 #include <iostream>
 
-using namespace std;
-
-int subroutine(int number)
+void subroutine(int number)
 {
-   cout << "Αυτή είναι μια υπορουτίνα με αριθμό " << number << "." << endl;
-
-   return 0;
+   std::cout << "Αυτή είναι μια υπορουτίνα με αριθμό " << number << ".\n";
 }
 
 int main() {
-    cout << "Γεια σου, κόσμε!" << endl;
+    std::cout << "Γεια σου, κόσμε!\n";
 
-    if (true == true)
-        cout << "Εκτέλεση if: Αληθές και όχι ψευδές!" << endl;
+    if (true)
+        std::cout << "Εκτέλεση if: Αληθές και όχι ψευδές!\n";
 
-    cout << "Εκτέλεση βρόγχου: ";
+    std::cout << "Εκτέλεση βρόγχου: ";
     for (int i = 0; i < 10; i++)
     {
-        cout << i << " ";
+        std::cout << i << " ";
     }
-    cout << endl;
+    std::cout << std::endl;
 
     subroutine(5);
 
